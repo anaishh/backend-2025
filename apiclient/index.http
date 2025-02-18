@@ -1,0 +1,30 @@
+GET http://localhost:3000/api/users
+
+###
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "name": "Nuevo",
+    "email": "micrreo267@correo.es",
+    "age":37,
+    "password": "12345"
+}
+
+###
+PUT http://localhost:3000/api/users/micrreo2@correo.es
+Content-Type: application/json
+
+{
+    "name": "Marcos",
+    "email": "micrreo2@correo.es",
+    "age":37,
+    "password": "12345",
+    "role": "admin"
+}
+
+###
+DELETE http://localhost:3000/api/users/micrreo267@correo.es
+Content-Type: application/json
+
+
