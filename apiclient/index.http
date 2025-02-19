@@ -27,4 +27,13 @@ Content-Type: application/json
 DELETE http://localhost:3000/api/users/micrreo267@correo.es
 Content-Type: application/json
 
+###
+POST http://localhost:3000/api/storage HTTP/1.1
+Content-Type: multipart/form-data; boundary=boundary123
 
+--boundary123
+Content-Disposition: form-data; name="image"; filename="bici_lago.jpg"
+Content-Type: image/jpeg
+
+< ./bici_lago.jpg
+--boundary123--
