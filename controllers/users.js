@@ -1,6 +1,6 @@
 const UserModel = require('../models/users.js')
 
-const getItems = async ({req, res}) => {
+const getItems = async (req, res) => {
     console.log(req);
     const data = await UserModel.find();
     res.json(data);   
@@ -16,7 +16,7 @@ const updateItem =  async (req, res) => {
     const email = req.params.email;
     const data = await UserModel.findOneAndReplace(
         {email}, 
-        req.body);
+        req.body, {returnDocument: 'after'});
     res.json(data)
 }
 
