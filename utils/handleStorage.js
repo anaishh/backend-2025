@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
     }
 })
 
-const uploadMiddleware = multer({storage}) //Middleware entre la ruta y el controlador
+const uploadMiddleware = multer({storage, limits: { fileSize: 5 * 1024 }}) //Middleware entre la ruta y el controlador
 
-const uploadMiddlewareMemory = multer({storage: memory, limits: 500})
+const uploadMiddlewareMemory = multer({storage: memory, limits: { fileSize: 5 * 1024 }})
 module.exports = { uploadMiddleware, uploadMiddlewareMemory }
